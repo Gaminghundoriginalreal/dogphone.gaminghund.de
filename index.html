@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dogphone</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #f0f0f0;
+        }
+        header {
+            width: 100%;
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+            font-size: 2em;
+            font-weight: bold;
+        }
+        .language-buttons {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+        .language-buttons button {
+            margin: 0 5px;
+            padding: 5px 10px;
+            font-size: 1em;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+        }
+        .language-buttons button:hover {
+            background-color: #ddd;
+        }
+        .content {
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        DOGPHONE
+    </header>
+    <div class="language-buttons">
+        <button onclick="changeLanguage('de')">Deutsch</button>
+        <button onclick="changeLanguage('en')">English</button>
+    </div>
+    <div class="content">
+        <h2>Dogphone kommt 2026 in den Shop!</h2>
+        <p>Das Dogphone, ausgestattet mit Android 13, steht ab 2026 zum Verkauf bereit. Bleiben Sie gespannt auf das aufregendste Handy des Jahres!</p>
+    </div>
+
+    <script>
+        function changeLanguage(language) {
+            if (language === 'de') {
+                document.querySelector('.content').innerHTML = `
+                    <h2>Dogphone kommt 2026 in den Shop!</h2>
+                    <p>Das Dogphone, ausgestattet mit Android 13, steht ab 2026 zum Verkauf bereit. Bleiben Sie gespannt auf das aufregendste Handy des Jahres!</p>
+                `;
+            } else if (language === 'en') {
+                document.querySelector('.content').innerHTML = `
+                    <h2>Dogphone is coming to the shop in 2026!</h2>
+                    <p>The Dogphone, equipped with Android 13, will be available for purchase starting in 2026. Stay tuned for the most exciting phone of the year!</p>
+                `;
+            }
+        }
+    </script>
+</body>
+</html>
